@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manuel d'utilisation - Horloge DELF DALF</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --ink: #152033;
+      --muted: #4a5b76;
+      --accent: #0b5cab;
+      --line: #d7ddea;
+      --bg: #f4f7fc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Segoe UI", "Calibri", sans-serif;
+      font-size: 10pt;
+      line-height: 1.34;
+      background: white;
+    }
+
+    .doc {
+      max-width: 180mm;
+      margin: 0 auto;
+      padding: 4mm 0 0;
+    }
+
+    h1 {
+      margin: 0 0 2.5mm;
+      color: var(--accent);
+      font-size: 18pt;
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin: 4.5mm 0 1.6mm;
+      font-size: 12pt;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.7mm;
+    }
+
+    h3 {
+      margin: 2.5mm 0 0.8mm;
+      font-size: 10.8pt;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 1.6mm;
+    }
+
+    ul, ol {
+      margin: 1mm 0 1.8mm 4.2mm;
+      padding: 0;
+    }
+
+    li { margin: 0.7mm 0; }
+
+    .lead {
+      color: var(--muted);
+      margin-bottom: 2.2mm;
+    }
+
+    .note {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      padding: 2mm;
+      margin: 1.6mm 0 2.2mm;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2mm;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2mm;
+      break-inside: avoid;
+    }
+
+    .small {
+      font-size: 10pt;
+      color: var(--muted);
+    }
+
+    figure.screenshot {
+      margin: 1.8mm 0 2.5mm;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1.8mm;
+      background: #fff;
+      break-inside: avoid;
+    }
+
+    figure.screenshot img {
+      display: block;
+      width: 100%;
+      max-height: 33mm;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 4px;
+      border: 1px solid #e4e9f3;
+    }
+
+    figure.screenshot figcaption {
+      margin-top: 1.2mm;
+      font-size: 8.8pt;
+      color: var(--muted);
+    }
+
+    .page-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    @media print {
+      .doc { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="doc">
+    <h1>Manuel d'utilisation intuitif<br />Horloge DELF DALF</h1>
+    <p class="lead">Version terrain, concise et pratique. Objectif : prise en main en moins de 5 minutes.</p>
+
+    <h2>1) Démarrage rapide</h2>
+    <h3>Si l'application est deja installee</h3>
+    <ol>
+      <li>Ouvrez Horloge DELF DALF.</li>
+      <li>Vous arrivez directement sur le module des épreuves collectives.</li>
+    </ol>
+
+    <h3>Si vous lancez depuis le dossier projet</h3>
+    <ol>
+      <li>Ouvrez un terminal dans le dossier du projet.</li>
+      <li>Executez:<br /><strong>npm install</strong><br /><strong>npm run desktop</strong></li>
+    </ol>
+
+    <div class="note">
+      Les réglages (durées, affichage des secondes, logo) sont sauvegardés localement automatiquement.
+    </div>
+
+    <h2>2) Utiliser le chrono des épreuves collectives</h2>
+    <ol>
+      <li>Choisissez le niveau : A1, A2, B1, B2, C1 ou C2.</li>
+      <li>Choisissez le type de temps : normal ou tiers temps.</li>
+      <li>Lancez le chrono (demarrer/reprendre).</li>
+      <li>Pendant l'épreuve : pause, reprise, +1 min, -1 min selon besoin.</li>
+      <li>Option : activez/désactivez l'affichage des secondes.</li>
+      <li>En fin de session : réinitialiser pour revenir à la durée du niveau choisi.</li>
+    </ol>
+
+    <div class="two-cols">
+      <section class="box">
+        <h3>Bon réflexe avant de lancer</h3>
+        <ul>
+          <li>Vérifier niveau et mode (normal/tiers temps).</li>
+          <li>Faire un test de 1 minute.</li>
+          <li>Vérifier la lisibilité de l'écran.</li>
+        </ul>
+      </section>
+      <section class="box">
+        <h3>Quand utiliser pause ?</h3>
+        <ul>
+          <li>Interruption exceptionnelle.</li>
+          <li>Consigne organisationnelle.</li>
+          <li>Incident technique court.</li>
+        </ul>
+      </section>
+    </div>
+
+    <figure class="screenshot">
+      <img src="docs/manual-images/01-ecran-principal.png" alt="Écran principal du module épreuves collectives" />
+      <figcaption>Écran principal : choix du niveau, type de temps, chrono et commandes rapides.</figcaption>
+    </figure>
+
+    <h2>3) Synchroniser un chrono hors ligne (code court)</h2>
+    <p>Permet de transférer l'état du chrono vers un autre poste, sans internet ni réseau local.</p>
+
+    <h3>Exporter un code</h3>
+    <ol>
+      <li>Sur le poste source, cliquez sur génération du code hors ligne.</li>
+      <li>Notez ou copiez le code affiché.</li>
+    </ol>
+
+    <h3>Importer un code</h3>
+    <ol>
+      <li>Sur le poste cible, saisissez le code.</li>
+      <li>Cliquez sur importer.</li>
+      <li>Le chrono est recalé automatiquement (en cours, en pause ou terminé).</li>
+    </ol>
+
+    <p class="small">Conseil : importez rapidement le code pour limiter l'écart de temps.</p>
+
+    <figure class="screenshot">
+      <img src="docs/manual-images/02-code-synchro.png" alt="Génération de code de synchronisation hors ligne" />
+      <figcaption>Synchronisation hors ligne : génération d'un code court puis import sur le poste cible.</figcaption>
+    </figure>
+
+    <div class="page-break"></div>
+
+    <h2>4) Paramétrer les durées (icône engrenage)</h2>
+    <ol>
+      <li>Ouvrez les paramètres via l'icône engrenage.</li>
+      <li>Pour chaque niveau, réglez :
+        <ul>
+          <li>durée totale ;</li>
+          <li>tiers temps supplémentaire ;</li>
+          <li>durée oral par candidat ;</li>
+          <li>buffer oral.</li>
+        </ul>
+      </li>
+      <li>Cliquez sur Enregistrer.</li>
+      <li>Au besoin, utilisez Restaurer les valeurs par défaut.</li>
+    </ol>
+
+    <figure class="screenshot">
+      <img src="docs/manual-images/03-parametres.png" alt="Écran des paramètres de durées par niveau" />
+      <figcaption>Paramètres : ajustement des durées A1 à C2 et gestion du logo de l'école.</figcaption>
+    </figure>
+
+    <h2>5) Logo de l'école</h2>
+    <ol>
+      <li>Dans Paramètres, importez un logo (bmp, jpg, jpeg, png, svg, tif, tiff).</li>
+      <li>Contrôlez l'aperçu.</li>
+      <li>Retirez le logo si nécessaire.</li>
+    </ol>
+
+    <h2>6) Dépannage express</h2>
+    <div class="box">
+      <p><strong>Le chrono semble bloqué :</strong> vérifier si la session est en pause ou déjà arrivée à zéro.</p>
+      <p><strong>Les réglages ont disparu :</strong> relancer sur le même poste et le même profil utilisateur.</p>
+      <p><strong>Le logo n'apparaît pas :</strong> réimporter dans un format autorisé.</p>
+    </div>
+
+    <h2>7) Check-list jour d'examen</h2>
+    <ul>
+      <li>Test chrono effectué.</li>
+      <li>Niveau et mode vérifiés.</li>
+      <li>Poste de secours prêt.</li>
+      <li>Procédure code hors ligne connue.</li>
+    </ul>
+
+    <p class="small">Fin du manuel.</p>
+  </main>
+</body>
+</html>

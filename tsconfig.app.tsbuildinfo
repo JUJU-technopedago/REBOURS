@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/crashboundary.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/domain/defaultconfig.ts","./src/domain/types.ts","./src/lib/storage.ts","./src/lib/time.ts","./src/modules/collective/collectivemodule.tsx","./src/modules/oral/oralroommodule.tsx","./src/modules/settings/settingsmodule.tsx"],"version":"5.9.3"}
